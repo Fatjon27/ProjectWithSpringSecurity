@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration and Login System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="card-body">
+    <form
+            method="POST"
+            role="form"
+            th:action="@{/user/repair}"
+            th:object="${repair}"
+    >
+      <div class="form-group mb-3">
+        <label class="form-label">Device Serial</label>
+        <input
+                class="form-control"
+                id="deviceSerial"
+                name="deviceSerial"
+                placeholder="Enter Device Serial name"
+                th:field="*{deviceSerial}"
+                type="text"
+        />
+        <p th:errors = "*{deviceSerial}" class="text-danger"
+           th:if="${#fields.hasErrors('deviceSerial')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">Brand</label>
+        <input
+                class="form-control"
+                id="brand"
+                name="brand"
+                placeholder="Enter Brand name"
+                th:field="*{brand}"
+                type="text"
+        />
+        <p th:errors = "*{brand}" class="text-danger"
+           th:if="${#fields.hasErrors('brand')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">Device Template</label>
+        <input
+                class="form-control"
+                id="deviceTemplate"
+                name="deviceTemplate"
+                placeholder="Enter deviceTemplate name"
+                th:field="*{deviceTemplate}"
+                type="text"
+        />
+        <p th:errors = "*{deviceTemplate}" class="text-danger"
+           th:if="${#fields.hasErrors('deviceTemplate')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">problemDescription</label>
+        <input
+                class="form-control"
+                id="problemDescription"
+                name="problemDescriptione"
+                placeholder="Enter problemDescription name"
+                th:field="*{problemDescription}"
+                type="text"
+        />
+        <p th:errors = "*{problemDescription}" class="text-danger"
+           th:if="${#fields.hasErrors('problemDescription')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">purchaseDate</label>
+        <input
+                class="form-control"
+                id="purchaseDate"
+                name="purchaseDate"
+                placeholder="Enter purchaseDate name"
+                th:field="*{purchaseDate}"
+                type="date"
+        />
+        <p th:errors = "*{purchaseDate}" class="text-danger"
+           th:if="${#fields.hasErrors('purchaseDate')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">warrantyExpiryDate</label>
+        <input
+                class="form-control"
+                id="warrantyExpiryDate"
+                name="warrantyExpiryDate"
+                placeholder="Enter warrantyExpiryDate name"
+                th:field="*{warrantyExpiryDate}"
+                type="date"
+        />
+        <p th:errors = "*{warrantyExpiryDate}" class="text-danger"
+           th:if="${#fields.hasErrors('warrantyExpiryDate')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">additionalNotes</label>
+        <input
+                class="form-control"
+                id="additionalNotes"
+                name="additionalNotes"
+                placeholder="Enter additionalNotes name"
+                th:field="*{additionalNotes}"
+                type="text"
+        />
+        <p th:errors = "*{additionalNotes}" class="text-danger"
+           th:if="${#fields.hasErrors('additionalNotes')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">password</label>
+        <input
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter password name"
+                th:field="*{password}"
+                type="password"
+        />
+        <p th:errors = "*{password}" class="text-danger"
+           th:if="${#fields.hasErrors('password')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">fullAddress</label>
+        <input
+                class="form-control"
+                id="fullAddress"
+                name="fullAddress"
+                placeholder="Enter fullAddress name"
+                th:field="*{fullAddress}"
+                type="text"
+        />
+        <p th:errors = "*{fullAddress}" class="text-danger"
+           th:if="${#fields.hasErrors('fullAddress')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">telephoneNumber</label>
+        <input
+                class="form-control"
+                id="telephoneNumber"
+                name="telephoneNumber"
+                placeholder="Enter telephoneNumber name"
+                th:field="*{telephoneNumber}"
+                type="text"
+        />
+        <p th:errors = "*{telephoneNumber}" class="text-danger"
+           th:if="${#fields.hasErrors('telephoneNumber')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">email</label>
+        <input
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email name"
+                th:field="*{email}"
+                type="text"
+        />
+        <p th:errors = "*{email}" class="text-danger"
+           th:if="${#fields.hasErrors('email')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">fiscalCode</label>
+        <input
+                class="form-control"
+                id="fiscalCode"
+                name="fiscalCode"
+                placeholder="Enter fiscalCode name"
+                th:field="*{fiscalCode}"
+                type="text"
+        />
+        <p th:errors = "*{fiscalCode}" class="text-danger"
+           th:if="${#fields.hasErrors('fiscalCode')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">vatNumber</label>
+        <input
+                class="form-control"
+                id="vatNumber"
+                name="vatNumber"
+                placeholder="Enter vatNumber name"
+                th:field="*{vatNumber}"
+                type="text"
+        />
+        <p th:errors = "*{vatNumber}" class="text-danger"
+           th:if="${#fields.hasErrors('vatNumber')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">pec</label>
+        <input
+                class="form-control"
+                id="pec"
+                name="pec"
+                placeholder="Enter pec name"
+                th:field="*{pec}"
+                type="text"
+        />
+        <p th:errors = "*{pec}" class="text-danger"
+           th:if="${#fields.hasErrors('pec')}"></p>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-label">sdiCode</label>
+        <input
+                class="form-control"
+                id="sdiCode"
+                name="sdiCode"
+                placeholder="Enter sdiCode name"
+                th:field="*{sdiCode}"
+                type="text"
+        />
+        <p th:errors = "*{sdiCode}" class="text-danger"
+           th:if="${#fields.hasErrors('sdiCode')}"></p>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+      </div>
+    </form>
+</div>
+</body>
+</html>
